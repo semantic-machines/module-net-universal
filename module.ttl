@@ -1,0 +1,19 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix v-s: <http://semantic-machines.com/veda/veda-schema/> .
+
+v-s:module-net-universal
+  rdf:type v-s:Module ;
+  v-s:moduleUrl "https://github.com/semantic-machines/module-net-universal" ;
+  v-s:dependency v-s:module-net-basic;
+  rdfs:label "Module - net-universal"@en ;
+  rdfs:label "Модуль - универсалный маршрут"@ru ;
+.
+
+v-s:module-net-basic
+  rdf:type v-s:Module ;
+  v-s:moduleUrl "https://github.com/semantic-machines/module-net-basic" ;
+  v-s:moduleVersion "v1.1.2" ;
+.
+
