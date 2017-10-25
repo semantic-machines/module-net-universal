@@ -8,7 +8,7 @@ v-s:module-net-universal
   v-s:moduleUrl "https://github.com/semantic-machines/module-net-universal" ;
   v-s:dependency v-s:module-net-basic;
   rdfs:label "Module - net-universal"@en ;
-  rdfs:label "Модуль - универсалный маршрут"@ru ;
+  rdfs:label "Модуль - универсальный маршрут"@ru ;
 .
 
 v-s:module-net-basic
