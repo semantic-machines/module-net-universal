@@ -23,7 +23,7 @@ s-wf:WrapUniversalNet
   a v-wf:Net;
   v-wf:inputVariable s-wf:var_doc_id, s-wf:var_journal_initiator;
   v-wf:consistsOf s-wf:WrapUniversalNet_ic, s-wf:WrapUniversalNet_oc, s-wf:WrapUniversalNet_t, s-wf:WrapUniversalNet_ic_to_t, s-wf:WrapUniversalNet_t_to_oc;
-  rdfs:label "обертка универсального процесса"^^xsd:string.
+  rdfs:label "Универсальный процесс"^^xsd:string.
 
 s-wf:WrapUniversalNet_ic
   a v-wf:InputCondition;
@@ -115,5 +115,4 @@ s-wf:map_doc_id_4_PIV_doc_id
   v-wf:mappingExpression  "process.getInputVariable ('docId')" ;
   rdfs:isDefinedBy s-wf: ;
 .
-
 
