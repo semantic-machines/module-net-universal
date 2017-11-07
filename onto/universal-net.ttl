@@ -235,6 +235,7 @@ s-wf:nc_t3
   v-wf:split v-wf:XOR;
   rdfs:label "Установить: actor = [исполнитель текущего процесса], actor_task_date_to, actor_task_action, actor_task_comment"^^xsd:string;
   v-wf:belongsTo s-wf:net_coordination;
+  v-wf:startingMapping s-wf:map_doc_id;
   v-wf:completedMapping s-wf:map_set_actor_from_executor_or_PI_actor, s-wf:map_set_actor_from_executor_or_PI_controller, s-wf:map_PI_actor_task_date_to_4_actor_task_date_to, s-wf:map_PI_actor_task_action_4_actor_task_action;
   v-wf:completedMapping s-wf:map_PI_actor_task_comment_4_actor_task_comment, s-wf:map_initiator, s-wf:map_documentType;
   v-wf:locationX "248"^^xsd:integer.
