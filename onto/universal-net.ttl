@@ -248,6 +248,7 @@ s-wf:nc_t1
   v-wf:belongsTo s-wf:net_coordination;
   v-wf:predicate "true"^^xsd:string;
   v-wf:hasFlow s-wf:nc_f_t1_t2;
+  v-wf:startingMapping s-wf:map_get_rightset;
   v-wf:executor s-wf:codelet_down_right;
   rdfs:label "Установить права"^^xsd:string;
   v-wf:split v-wf:XOR;

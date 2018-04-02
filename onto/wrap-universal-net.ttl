@@ -21,7 +21,7 @@
 
 s-wf:WrapUniversalNet
   a v-wf:Net;
-  v-wf:inputVariable s-wf:var_doc_id, s-wf:var_journal_initiator;
+  v-wf:inputVariable s-wf:var_doc_id, s-wf:var_journal_initiator, s-wf:var_rightset;
   v-wf:consistsOf s-wf:WrapUniversalNet_ic, s-wf:WrapUniversalNet_oc, s-wf:WrapUniversalNet_t, s-wf:WrapUniversalNet_ic_to_t, s-wf:WrapUniversalNet_t_to_oc;
   rdfs:label "Универсальный процесс"^^xsd:string.
 
@@ -41,7 +41,7 @@ s-wf:WrapUniversalNet_t
   a v-wf:Task;
   v-wf:subNet s-wf:net_coordination;
   v-wf:split v-wf:None;
-  v-wf:startingMapping s-wf:map_controller_4_PIV_controller, s-wf:map_initiator_4_PIV_initiator, s-wf:map_actor_task_comment_4_PIV_actor_task_comment, s-wf:map_actor_task_date_to_4_PIV_actor_task_date_to, s-wf:map_possible_decision_4_PIV_possible_decision,s-wf:map_doc_id_4_PIV_doc_id,s-wf:map_decision_form_type_4_PIV_decision_form_type,s-wf:map_actor_task_action_4_PIV_actor_task_action;
+  v-wf:startingMapping s-wf:map_controller_4_PIV_controller, s-wf:map_initiator_4_PIV_initiator, s-wf:map_actor_task_comment_4_PIV_actor_task_comment, s-wf:map_actor_task_date_to_4_PIV_actor_task_date_to, s-wf:map_possible_decision_4_PIV_possible_decision,s-wf:map_doc_id_4_PIV_doc_id,s-wf:map_decision_form_type_4_PIV_decision_form_type,s-wf:map_actor_task_action_4_PIV_actor_task_action, s-wf:map_get_rightset;
   v-wf:join v-wf:None;
   v-wf:executor s-wf:WrapUniversalNet_executor;
   v-wf:hasFlow s-wf:WrapUniversalNet_t_to_oc;
