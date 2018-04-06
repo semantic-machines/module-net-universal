@@ -214,7 +214,7 @@ s-wf:net_coordination
   v-wf:consistsOf s-wf:nc_f_c1_set_status_start, s-wf:set_status_start, s-wf:set_status_start_t1_flow;
   v-wf:consistsOf s-wf:nc_f_c1_set_status_start, s-wf:set_status_finish, s-wf:set_status_finish_end_flow;
   v-wf:completedMapping s-wf:map_set_result_from_local, s-wf:map_set_result_decision_from_local, s-wf:map_last_actor_4_PLV_actor;
-  v-wf:inputVariable s-wf:var_msg_template, s-wf:var_doc_id, s-wf:var_initiator, s-wf:var_coordinator, s-wf:var_coordinator_level, s-wf:var_rightset;
+  v-wf:inputVariable s-wf:var_msg_template, s-wf:var_doc_id, s-wf:var_initiator, s-wf:var_coordinator, s-wf:var_coordinator_level, s-wf:var_rightset, s-wf:var_set_status;
   rdfs:isDefinedBy <http://semantic-machines.com/veda/simple-workflow/>;
   v-wf:localVariable s-wf:var_responsible, s-wf:var_result, s-wf:var_actor, s-wf:var_controller, s-wf:var_add_request_actor, s-wf:var_result_decision, s-wf:var_result_decision_nct2, s-wf:var_actor_task_date_to;
   v-wf:localVariable s-wf:var_actor_task_comment, s-wf:var_actor_task_action, s-wf:var_redirect_from, s-wf:var_documentType.
@@ -257,7 +257,9 @@ s-wf:nc_t1
 .
 
 s-wf:set_status_start a v-wf:Task;
+  rdfs:isDefinedBy s-wf: ;
   rdfs:label "Установка статуса [Исполнение]"^^xsd:string;
+  v-wf:belongsTo s-wf:net_coordination;
   v-wf:executor s-wf:codelet_add_status_execution;
   v-wf:hasFlow s-wf:set_status_start_t1_flow;
   v-wf:join v-wf:None;
