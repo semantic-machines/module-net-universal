@@ -31,7 +31,7 @@ s-wf:var_coordination_level
 s-wf:map_coord_level
   rdf:type v-wf:Mapping ;
   v-wf:mapToVariable s-wf:var_coordination_level ;
-  v-wf:mappingExpression  "process.getInputVariable ('coordinationLevel')" ;
+  v-wf:mappingExpression "process.getInputVariable ('coordinationLevel')" ;
   rdfs:isDefinedBy s-wf: ;
 .
 
@@ -419,7 +419,7 @@ d:a74e1dea7-75e9-9d5f-b942-d1a7f2b91b2b a v-wf:Flow;
 s-wf:map_set_decision_from_local
   rdf:type v-wf:Mapping ;
   v-wf:mapToVariable s-wf:var_result ;
-  v-wf:mappingExpression  "task_result.getValue ('result')";
+  v-wf:mappingExpression "task_result.getValue ('result')";
   rdfs:isDefinedBy s-wf: ;
 .
 
