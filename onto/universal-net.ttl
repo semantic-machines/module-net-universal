@@ -291,7 +291,7 @@ s-wf:set_status_finish_end_flow a v-wf:Flow;
 d:a16bb1fd3-64eb-a7bb-501d-889b2aa4500d v-wf:hasFlow d:a8b89a22d-23b9-1c1c-c5dc-3443fd3972de;
   a v-wf:Task;
   rdfs:label "Установить параметры из переменной actor_task"^^xsd:string;
-  v-s:author td:RomanKarpov-Analyst1;
+  v-s:author cfg:AdministratorAppointment;
   v-wf:completedMapping s-wf:map_actor_task_date_to_4_actor_task, s-wf:map_actor_task_comment_4_actor_task, s-wf:map_initiator_4_actor_task;
   v-s:created "2015-11-17T11:54:51.988Z"^^xsd:dateTime;
   v-wf:locationX "66"^^xsd:integer;
@@ -404,7 +404,7 @@ s-wf:additional_user_response
   v-wf:completedMapping s-wf:map_actor_task_action_4_PIV_actor_task_action;
   rdfs:label "Дополнительная реакция"^^xsd:string;
   v-wf:executor s-wf:def_exec_initiator;
-  v-s:author td:RomanKarpov-Analyst1;
+  v-s:author cfg:AdministratorAppointment;
   v-s:created "2015-11-09T12:51:20.000Z"^^xsd:dateTime;
   v-wf:locationX "543"^^xsd:integer;
   v-wf:locationY "243"^^xsd:integer;
@@ -412,7 +412,7 @@ s-wf:additional_user_response
 
 d:a74e1dea7-75e9-9d5f-b942-d1a7f2b91b2b a v-wf:Flow;
   v-wf:predicate "task_result.is_all_executors_taken_decision ('result', newUri ('v-wf:DecisionAchieved')) == true "^^xsd:string;
-  v-s:author td:RomanKarpov-Analyst1;
+  v-s:author cfg:AdministratorAppointment;
   v-s:created "2015-11-25T09:21:02.220Z"^^xsd:dateTime;
   v-wf:flowsInto s-wf:nc_oc.
 
@@ -428,7 +428,7 @@ d:abc5142af-b501-1ec6-8ee0-acb767f078a4
   a v-wf:Task;
   rdfs:label "Обработка redirect: actor = *result_decision[wf:to]"^^xsd:string;
   v-wf:completedMapping s-wf:map_actor_2_result_decision, s-wf:map_redirect_from_2_result_decision;
-  v-s:author td:RomanKarpov-Analyst1;
+  v-s:author cfg:AdministratorAppointment;
   v-s:created "2015-11-10T18:08:39.175Z"^^xsd:dateTime;
   v-wf:locationX "645"^^xsd:integer;
   v-wf:locationY "632"^^xsd:integer.
@@ -438,7 +438,7 @@ d:abc5142af-b501-1ec6-8ee0-acb767f078a4_oc
   a v-wf:Task;
   rdfs:label "Обработка redirect: controller = *result_decision[wf:to]"^^xsd:string;
   v-wf:completedMapping s-wf:map_controller_2_result_decision, s-wf:map_redirect_from_2_result_decision;
-  v-s:author td:RomanKarpov-Analyst1;
+  v-s:author cfg:AdministratorAppointment;
   v-s:created "2015-11-10T18:08:39.175Z"^^xsd:dateTime;
   v-wf:locationX "1126"^^xsd:integer;
   v-wf:locationY "383"^^xsd:integer.
@@ -448,7 +448,7 @@ d:abc5142af-b501-1ec6-8ee0-acb767f078a4_rti
   a v-wf:Task;
   rdfs:label "Обработка redirect: responsible = *result_decision[wf:to]"^^xsd:string;
   v-wf:completedMapping s-wf:map_responsible_2_result_decision, s-wf:map_redirect_from_2_result_decision;
-  v-s:author td:RomanKarpov-Analyst1;
+  v-s:author cfg:AdministratorAppointment;
   v-s:created "2015-11-10T18:08:39.175Z"^^xsd:dateTime;
   v-wf:locationX "1055"^^xsd:integer;
   v-wf:locationY "741"^^xsd:integer.
