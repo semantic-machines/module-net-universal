@@ -50,7 +50,26 @@ s-wf:tr_actor_form
   v-wf:transformRule s-wf:rul_tr_form_9 ;
   v-wf:transformRule s-wf:rul_tr_form_10 ;
   rdfs:isDefinedBy s-wf: ;
-  rdfs:label "Трансформация создания пользовательской формы ответа на задачу"@ru ;
+  rdfs:label "Трансформация создания пользовательской формы ответа на задачу без управляющих кнопок"@ru ;
+.
+
+s-wf:tr_actor_form_direct
+  rdf:type v-wf:Transform ;
+  v-wf:transformRule s-wf:rul_tr_form_1 ;
+  v-wf:transformRule s-wf:rul_tr_form_1a ;
+  v-wf:transformRule s-wf:rul_tr_form_1b ;
+  v-wf:transformRule s-wf:rul_tr_form_a ;
+  v-wf:transformRule s-wf:rul_tr_form_2a ;
+  v-wf:transformRule s-wf:rul_tr_form_3 ;
+  v-wf:transformRule s-wf:rul_tr_form_4 ;
+  v-wf:transformRule s-wf:rul_tr_form_5 ;
+  v-wf:transformRule s-wf:rul_tr_form_6 ;
+  v-wf:transformRule s-wf:rul_tr_form_8 ;
+  v-wf:transformRule s-wf:rul_tr_form_9 ;
+  v-wf:transformRule s-wf:rul_tr_form_10 ;
+  v-wf:transformRule s-wf:rul_tr_form_11 ;
+  rdfs:isDefinedBy s-wf: ;
+  rdfs:label "Трансформация создания пользовательской формы ответа на задачу с управляющими кнпоками"@ru ;
 .
 
 s-wf:rul_tr_form_1
@@ -201,6 +220,15 @@ s-wf:rul_tr_form_10
   rdfs:label "Установить дату выдачи задачи"@ru ;
 .
 
+s-wf:rul_tr_form_11
+  rdf:type v-wf:Rule ;
+  v-wf:segregateElement "contentName('@')" ;
+  v-wf:aggregate  "putBoolean ('v-wf:isDirectTask', true)";
+  v-wf:grouping "1";
+  rdfs:isDefinedBy s-wf: ;
+  rdfs:label "Установить свойство для прямой задачи"@ru ;
+.
+
 s-wf:net_coordination
   a v-wf:Net;
   rdfs:label "Единичный процесс"@ru;
@@ -329,7 +357,7 @@ s-wf:nc_t2
   v-wf:locationY "536"^^xsd:integer;
   v-wf:split v-wf:XOR;
   v-wf:belongsTo s-wf:net_coordination;
-  v-wf:startDecisionTransform s-wf:tr_actor_form;
+  v-wf:startDecisionTransform s-wf:tr_actor_form_direct;
   v-wf:completeDecisionTransform s-wf:tr_taken_decision;
   v-wf:hasFlow s-wf:nc_f_t2_t1, s-wf:nc_f_t2_oc, d:a65787936-f51e-a83c-f537-95eaaa02c21a, s-wf:nc_t2_to_r, s-wf:nc_f_t2_c2;
   rdfs:label "Выдача задачи";
@@ -379,7 +407,7 @@ s-wf:nc_oc
   v-wf:startDecisionTransform s-wf:tr_actor_form;
   v-wf:completeDecisionTransform s-wf:tr_taken_decision;
   v-wf:expectedResultType s-wf:UserTaskForm;
-  v-wf:startingMapping s-wf:map_doc_id, s-wf:map_from_sys_appt, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_actor_task_action_4LV_result_decision_nct2, s-wf:map_t2_sm_control;
+  v-wf:startingMapping s-wf:map_doc_id, s-wf:map_from_2_result_decision_author, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_actor_task_action_4LV_result_decision_nct2, s-wf:map_t2_sm_control;
   v-wf:startingMapping s-wf:possible_decision_for_controller, s-wf:map_decision_route_to_add_reaction, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_actor_task_description_from_LV_result_decision, s-wf:map_redirect_from_4_PLV_redirect_from;
   v-wf:startingMessageMap s-wf:map_comment_4_TIV_actor_task_comment, s-wf:map_msg_template_4_SV_default_template, s-wf:map_document_4_TIV_docId, s-wf:map_vf_to_4_O_executor;
   v-wf:startingMessageMap s-wf:map_comment_4_TIV_actor_task_action, s-wf:map_inbox_url_4_vedaInfo_appInboxUrl, s-wf:map_doc_url_4_vedaInfo_appUrl;
