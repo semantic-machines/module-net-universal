@@ -222,8 +222,9 @@ s-wf:rul_tr_form_10
 
 s-wf:rul_tr_form_11
   rdf:type v-wf:Rule ;
-  v-wf:segregateElement "contentName('@')" ;
-  v-wf:aggregate  "putBoolean ('v-wf:isDirectTask', true)";
+  v-wf:segregateObject "objectContentStrValue ('v-wf:variableName', 'docId')" ;
+  v-wf:segregateElement "contentName('v-wf:variableValue')" ;
+  v-wf:aggregate  "putBoolean ('v-wf:isDirectTask', 'true')";
   v-wf:grouping "1";
   rdfs:isDefinedBy s-wf: ;
   rdfs:label "Установить свойство для прямой задачи"@ru ;
