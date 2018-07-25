@@ -82,15 +82,15 @@ s-wf:rul_tr_form_1
   v-wf:aggregate  "putValue ('v-wf:onDocument')";
 #  v-wf:aggregate  "putExecutor ('v-wf:to')";
   v-wf:aggregate  """
-    if ( getUri(get_properties_chain(executor, [{$get: 'rdf:type'}], [executor])) === 'v-s:Appointment' ) {
-      putUri ('v-wf:to', getUri(get_properties_chain(executor, [{$get: 'v-s:employee'}], [executor])));
+    if ( veda.Util.getUri(get_properties_chain(executor, [{$get: 'rdf:type'}], [executor])) === 'v-s:Appointment' ) {
+      putUri ('v-wf:to', veda.Util.getUri(get_properties_chain(executor, [{$get: 'v-s:employee'}], [executor])));
     } else {
       putExecutor ('v-wf:to');
     }
   """;
   v-wf:aggregate  """
-    if ( getUri(get_properties_chain(executor, [{$get: 'rdf:type'}], [executor])) === 'v-s:Appointment' ) {
-      putUri ('v-wf:to', getUri(get_properties_chain(executor, [{$get: 'v-s:occupation'}], [executor])));
+    if ( veda.Util.getUri(get_properties_chain(executor, [{$get: 'rdf:type'}], [executor])) === 'v-s:Appointment' ) {
+      putUri ('v-wf:to', veda.Util.getUri(get_properties_chain(executor, [{$get: 'v-s:occupation'}], [executor])));
     }
   """;
   v-wf:aggregate  "putWorkOrder ('v-wf:onWorkOrder')";
@@ -440,7 +440,7 @@ s-wf:additional_user_response
   rdfs:isDefinedBy <http://semantic-machines.com/veda/simple-workflow/>.
 
 d:a74e1dea7-75e9-9d5f-b942-d1a7f2b91b2b a v-wf:Flow;
-  v-wf:predicate "task_result.is_all_executors_taken_decision ('result', newUri ('v-wf:DecisionAchieved')) == true "^^xsd:string;
+  v-wf:predicate "task_result.is_all_executors_taken_decision ('result', veda.Util.newUri ('v-wf:DecisionAchieved')) == true "^^xsd:string;
   v-s:author cfg:AdministratorAppointment;
   v-s:created "2015-11-25T09:21:02.220Z"^^xsd:dateTime;
   v-wf:flowsInto s-wf:nc_oc.
