@@ -82,15 +82,15 @@ s-wf:rul_tr_form_1
   v-wf:aggregate  "putValue ('v-wf:onDocument')";
 #  v-wf:aggregate  "putExecutor ('v-wf:to')";
   v-wf:aggregate  """
-    if ( veda.Util.getUri(get_properties_chain(executor, [{$get: 'rdf:type'}], [executor])) === 'v-s:Appointment' ) {
-      putUri ('v-wf:to', veda.Util.getUri(get_properties_chain(executor, [{$get: 'v-s:employee'}], [executor])));
+    if ( veda.Util.getUri(veda.Workflow.get_properties_chain(executor, [{$get: 'rdf:type'}], [executor])) === 'v-s:Appointment' ) {
+      putUri ('v-wf:to', veda.Util.getUri(veda.Workflow.get_properties_chain(executor, [{$get: 'v-s:employee'}], [executor])));
     } else {
       putExecutor ('v-wf:to');
     }
   """;
   v-wf:aggregate  """
-    if ( veda.Util.getUri(get_properties_chain(executor, [{$get: 'rdf:type'}], [executor])) === 'v-s:Appointment' ) {
-      putUri ('v-wf:to', veda.Util.getUri(get_properties_chain(executor, [{$get: 'v-s:occupation'}], [executor])));
+    if ( veda.Util.getUri(veda.Workflow.get_properties_chain(executor, [{$get: 'rdf:type'}], [executor])) === 'v-s:Appointment' ) {
+      putUri ('v-wf:to', veda.Util.getUri(veda.Workflow.get_properties_chain(executor, [{$get: 'v-s:occupation'}], [executor])));
     }
   """;
   v-wf:aggregate  "putWorkOrder ('v-wf:onWorkOrder')";
