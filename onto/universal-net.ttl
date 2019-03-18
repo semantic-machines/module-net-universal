@@ -242,6 +242,7 @@ s-wf:net_coordination
   v-wf:consistsOf s-wf:nc_rti_rights, s-wf:nc_oc_rights, d:a8b89a22d-23b9-1c1c-c5dc-3443fd3972de, s-wf:c2, d:a74e1dea7-75e9-9d5f-b942-d1a7f2b91b2b, d:a6caa3c11-9333-4270-549f-e899df057223;
   v-wf:consistsOf s-wf:nc_f_c1_set_status_start, s-wf:set_status_start, s-wf:set_status_start_t1_flow;
   v-wf:consistsOf s-wf:nc_f_c1_set_status_start, s-wf:set_status_finish, s-wf:set_status_finish_end_flow;
+  v-wf:consistsOf d:abc5142af-b501-1ec6-8ee0-acb767f078a4_another, d:a2dcf4fb5-ca60-4b2d-d303-91f8c29db59e_another, s-wf:nc_another_rights, s-wf:nc_f_t1_rti;
   v-wf:completedMapping s-wf:map_set_result_from_local, s-wf:map_set_result_decision_from_local, s-wf:map_last_actor_4_PLV_actor;
   v-wf:inputVariable s-wf:var_msg_template, s-wf:var_doc_id, s-wf:var_initiator, s-wf:var_coordinator, s-wf:var_coordinator_level, s-wf:var_rightset, s-wf:var_set_status;
   rdfs:isDefinedBy <http://semantic-machines.com/veda/simple-workflow/>;
@@ -352,6 +353,18 @@ s-wf:nc_rti_rights
   v-wf:split v-wf:XOR;
 .
 
+s-wf:nc_another_rights
+  a v-wf:Task;
+  rdfs:isDefinedBy s-wf: ;
+  v-wf:locationX "767"^^xsd:integer;
+  v-wf:locationY "629"^^xsd:integer;
+  v-wf:belongsTo s-wf:net_coordination;
+  v-wf:predicate "true"^^xsd:string;
+  v-wf:hasFlow s-wf:nc_f_t1_another;
+  v-wf:executor s-wf:codelet_change_responsible_right;
+  rdfs:label "Установить права"^^xsd:string;
+  v-wf:split v-wf:XOR;
+.
 s-wf:nc_t2
   a v-wf:Task;
   v-wf:locationX "755"^^xsd:integer;
@@ -379,7 +392,7 @@ s-wf:nc_return_to_initiator
   a v-wf:Task;
   v-wf:locationX "963"^^xsd:integer;
   v-wf:locationY "618"^^xsd:integer;
-  v-wf:hasFlow s-wf:nc_r_to_i_return, s-wf:nc_r_to_i_finish, s-wf:nc_r_to_aur;
+  v-wf:hasFlow s-wf:nc_r_to_i_return_another, s-wf:nc_r_to_i_finish, s-wf:nc_r_to_aur;
   rdfs:label "Обработка отказа"^^xsd:string;
   v-wf:belongsTo s-wf:net_coordination;
   v-wf:startDecisionTransform s-wf:tr_actor_form;
@@ -482,4 +495,12 @@ d:abc5142af-b501-1ec6-8ee0-acb767f078a4_rti
   v-wf:locationX "1055"^^xsd:integer;
   v-wf:locationY "741"^^xsd:integer.
 
-
+d:abc5142af-b501-1ec6-8ee0-acb767f078a4_another
+  v-wf:hasFlow d:a2dcf4fb5-ca60-4b2d-d303-91f8c29db59e_another;
+  a v-wf:Task;
+  rdfs:label "Обработка redirect: actor = *result_decision[wf:to]"^^xsd:string;
+  v-wf:completedMapping s-wf:map_actor_2_result_decision, s-wf:map_redirect_from_2_result_decision;
+  v-s:author cfg:AdministratorAppointment;
+  v-s:created "2015-11-10T18:08:39.175Z"^^xsd:dateTime;
+  v-wf:locationX "762"^^xsd:integer;
+  v-wf:locationY "767"^^xsd:integer.
