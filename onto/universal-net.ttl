@@ -343,8 +343,8 @@ s-wf:nc_oc_rights
 s-wf:nc_rti_rights
   a v-wf:Task;
   rdfs:isDefinedBy s-wf: ;
-  v-wf:locationX "1109"^^xsd:integer;
-  v-wf:locationY "729"^^xsd:integer;
+  v-wf:locationX "861"^^xsd:integer;
+  v-wf:locationY "736"^^xsd:integer;
   v-wf:belongsTo s-wf:net_coordination;
   v-wf:predicate "true"^^xsd:string;
   v-wf:hasFlow s-wf:nc_f_t1_rti;
@@ -356,8 +356,8 @@ s-wf:nc_rti_rights
 s-wf:nc_another_rights
   a v-wf:Task;
   rdfs:isDefinedBy s-wf: ;
-  v-wf:locationX "825"^^xsd:integer;
-  v-wf:locationY "650"^^xsd:integer;
+  v-wf:locationX "767"^^xsd:integer;
+  v-wf:locationY "629"^^xsd:integer;
   v-wf:belongsTo s-wf:net_coordination;
   v-wf:predicate "true"^^xsd:string;
   v-wf:hasFlow s-wf:nc_f_t1_another;
@@ -390,8 +390,8 @@ s-wf:nc_t2
 
 s-wf:nc_return_to_initiator
   a v-wf:Task;
-  v-wf:locationX "1027"^^xsd:integer;
-  v-wf:locationY "611"^^xsd:integer;
+  v-wf:locationX "963"^^xsd:integer;
+  v-wf:locationY "618"^^xsd:integer;
   v-wf:hasFlow s-wf:nc_r_to_i_return_another, s-wf:nc_r_to_i_finish, s-wf:nc_r_to_aur;
   rdfs:label "Обработка отказа"^^xsd:string;
   v-wf:belongsTo s-wf:net_coordination;
@@ -492,8 +492,8 @@ d:abc5142af-b501-1ec6-8ee0-acb767f078a4_rti
   v-wf:completedMapping s-wf:map_responsible_2_result_decision, s-wf:map_redirect_from_2_result_decision;
   v-s:author cfg:AdministratorAppointment;
   v-s:created "2015-11-10T18:08:39.175Z"^^xsd:dateTime;
-  v-wf:locationX "1267"^^xsd:integer;
-  v-wf:locationY "727"^^xsd:integer.
+  v-wf:locationX "1055"^^xsd:integer;
+  v-wf:locationY "741"^^xsd:integer.
 
 d:abc5142af-b501-1ec6-8ee0-acb767f078a4_another
   v-wf:hasFlow d:a2dcf4fb5-ca60-4b2d-d303-91f8c29db59e_another;
@@ -502,5 +502,5 @@ d:abc5142af-b501-1ec6-8ee0-acb767f078a4_another
   v-wf:completedMapping s-wf:map_actor_2_result_decision, s-wf:map_redirect_from_2_result_decision;
   v-s:author cfg:AdministratorAppointment;
   v-s:created "2015-11-10T18:08:39.175Z"^^xsd:dateTime;
-  v-wf:locationX "932"^^xsd:integer;
-  v-wf:locationY "730"^^xsd:integer.
+  v-wf:locationX "762"^^xsd:integer;
+  v-wf:locationY "767"^^xsd:integer.
