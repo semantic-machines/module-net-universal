@@ -363,7 +363,7 @@ s-wf:un_another_rights a v-wf:Task;
     v-s:creator cfg:AdministratorAppointment;
     v-s:updateCounter "2"^^xsd:integer;
     v-wf:belongsTo s-wf:UniversalNet;
-    v-wf:executor s-wf:codelet_change_responsible_right;
+    v-wf:executor s-wf:codelet_change_actor_right;
     v-wf:hasFlow s-wf:un_f_t1_another;
     v-wf:join v-wf:None;
     v-wf:locationX "678"^^xsd:integer;
