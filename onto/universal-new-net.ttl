@@ -467,6 +467,11 @@ s-wf:un_flow_25 a v-wf:Flow;
     v-wf:belongsTo s-wf:UniversalNet;
     v-wf:flowsInto s-wf:u4;
     v-wf:predicate "task_result.is_all_executors_taken_decision ('result', veda.Util.newUri ('v-wf:DecisionIssueTaskToAnother')) == true"^^xsd:string.
+s-wf:un_flow_24 a v-wf:Flow;
+  rdfs:isDefinedBy s-wf: ;
+  v-wf:predicate "true"^^xsd:string;
+  v-wf:belongsTo s-wf:UniversalNet;
+  v-wf:flowsInto s-wf:un_task_22.
 s-wf:un_task_23 a v-wf:Task;
     rdfs:isDefinedBy <http://semantic-machines.com/veda/simple-workflow/>;
     rdfs:label "Ошибочный исполнитель"^^xsd:string;
