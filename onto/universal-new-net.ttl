@@ -433,7 +433,7 @@ s-wf:map_un_task_20_task_action
   rdf:type v-wf:Mapping ;
   v-wf:mapToVariable s-wf:var_actor_task_action ;
   v-wf:mappingExpression """
-			veda.Util.newUri ('v-wf:DecisionNotPerformed_Bundle')                      
+      veda.Util.newStr ('Не выполнено. Примите решение')
   """;
   rdfs:label "Название задачи при ответе Не выполнено"@ru ;
 .    
@@ -506,7 +506,7 @@ s-wf:map_un_task_23_task_action
   rdf:type v-wf:Mapping ;
   v-wf:mapToVariable s-wf:var_actor_task_action ;
   v-wf:mappingExpression """
-			veda.Util.newUri ('v-wf:DecisionNotForMe_Bundle')                      
+			veda.Util.newStr ('Ошибочный исполнитель. Примите решение')
   """;
   rdfs:label "Название задачи при ответе Ошибочный исполнитель"@ru ;
 .
@@ -665,7 +665,7 @@ s-wf:map_un_task_26_task_action
   rdf:type v-wf:Mapping ;
   v-wf:mapToVariable s-wf:var_actor_task_action ;
   v-wf:mappingExpression """
-			veda.Util.newUri ('v-wf:DecisionRejected_Bundle')                      
+			veda.Util.newStr ('Отклонено. Примите решение')
   """;
   rdfs:label "Название задачи при ответе Отклонено"@ru ;
 .
@@ -762,7 +762,7 @@ s-wf:map_un_task_29_task_action
   rdf:type v-wf:Mapping ;
   v-wf:mapToVariable s-wf:var_actor_task_action ;
   v-wf:mappingExpression """
-			veda.Util.newUri ('v-wf:DecisionProlongate_Bundle')                      
+			veda.Util.newStr ('Продлить срок')
   """;
   rdfs:label "Название задачи при ответе Прошу продлить срок"@ru ;
 .
@@ -875,7 +875,7 @@ s-wf:map_un_task_32_task_action
   rdf:type v-wf:Mapping ;
   v-wf:mapToVariable s-wf:var_actor_task_action ;
   v-wf:mappingExpression """
-			veda.Util.newUri ('v-wf:DecisionRemake_Bundle')                      
+			veda.Util.newStr ('Доработать')
   """;
   rdfs:label "Название задачи при ответе доработать"@ru ;
 .
