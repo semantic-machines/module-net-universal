@@ -430,12 +430,12 @@ s-wf:un_task_21 a v-wf:Task;
     v-wf:locationY "725"^^xsd:integer;
     v-wf:split v-wf:None.
 s-wf:map_un_task_20_task_action
-    rdf:type v-wf:Mapping ;
-    v-wf:mapToVariable s-wf:var_actor_task_action ;
-    v-wf:mappingExpression """
-        veda.Util.newStr(veda.Util.getPropertyChain('v-wf:DecisionNotPerformed_Bundle', 'rdfs:label'));
-    """;
-    rdfs:label "Название задачи при ответе Не выполнено"@ru ;
+  rdf:type v-wf:Mapping ;
+  v-wf:mapToVariable s-wf:var_actor_task_action ;
+  v-wf:mappingExpression """
+      veda.Util.newStr ('Не выполнено. Примите решение')
+  """;
+  rdfs:label "Название задачи при ответе Не выполнено"@ru ;
 .    
 s-wf:un_flow_22 a v-wf:Flow;
     rdfs:isDefinedBy <http://semantic-machines.com/veda/simple-workflow/>;
@@ -503,12 +503,12 @@ s-wf:un_task_23 a v-wf:Task;
     v-wf:startingMapping s-wf:map_controller_4_PLV_controller, s-wf:map_doc_id, s-wf:map_from_2_result_decision_author, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_un_task_23_task_action, s-wf:map_t2_sm3, s-wf:possible_decision_after_return, s-wf:map_decision_route_to_add_reaction, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_actor_task_description_from_LV_result_decision, s-wf:map_redirect_from_4_PLV_redirect_from;
     v-wf:startingMessageMap s-wf:map_comment_4_TIV_actor_task_comment, s-wf:map_msg_template_4_SV_default_template, s-wf:map_document_4_TIV_docId, s-wf:map_vf_to_4_O_executor, s-wf:map_comment_4_TIV_actor_task_action, s-wf:map_inbox_url_4_appInboxUrl_of_executor, s-wf:map_doc_url_4_appUrl_of_executor, s-wf:map_from_4_TIV_from, s-wf:map_rdf_type_4_v_s_Email, s-wf:map_task_url_4_O_DecisionForms_of_executor, s-wf:map_to_4_O_executor, s-wf:map_wf_from_4_TIV_initiator.
 s-wf:map_un_task_23_task_action
-    rdf:type v-wf:Mapping ;
-    v-wf:mapToVariable s-wf:var_actor_task_action ;
-    v-wf:mappingExpression """
-        veda.Util.newStr(veda.Util.getPropertyChain('v-wf:DecisionNotForMe_Bundle', 'rdfs:label'));
-    """;
-    rdfs:label "Название задачи при ответе Ошибочный исполнитель"@ru ;
+  rdf:type v-wf:Mapping ;
+  v-wf:mapToVariable s-wf:var_actor_task_action ;
+  v-wf:mappingExpression """
+			veda.Util.newStr ('Ошибочный исполнитель. Примите решение')
+  """;
+  rdfs:label "Название задачи при ответе Ошибочный исполнитель"@ru ;
 .
 s-wf:un_flow_26 a v-wf:Flow;
     rdfs:isDefinedBy <http://semantic-machines.com/veda/simple-workflow/>;
@@ -662,11 +662,11 @@ s-wf:un_task_26 a v-wf:Task;
     v-wf:startingMapping s-wf:map_controller_4_PLV_controller, s-wf:map_doc_id, s-wf:map_from_2_result_decision_author, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_un_task_26_task_action, s-wf:map_t2_sm3, s-wf:possible_decision_after_return, s-wf:map_decision_route_to_add_reaction, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_actor_task_description_from_LV_result_decision, s-wf:map_redirect_from_4_PLV_redirect_from;
     v-wf:startingMessageMap s-wf:map_comment_4_TIV_actor_task_comment, s-wf:map_msg_template_4_SV_default_template, s-wf:map_document_4_TIV_docId, s-wf:map_vf_to_4_O_executor, s-wf:map_comment_4_TIV_actor_task_action, s-wf:map_inbox_url_4_appInboxUrl_of_executor, s-wf:map_doc_url_4_appUrl_of_executor, s-wf:map_from_4_TIV_from, s-wf:map_rdf_type_4_v_s_Email, s-wf:map_task_url_4_O_DecisionForms_of_executor, s-wf:map_to_4_O_executor, s-wf:map_wf_from_4_TIV_initiator.
 s-wf:map_un_task_26_task_action
-    rdf:type v-wf:Mapping ;
-    v-wf:mapToVariable s-wf:var_actor_task_action ;
-    v-wf:mappingExpression """
-        veda.Util.newStr(veda.Util.getPropertyChain('v-wf:DecisionRejected_Bundle', 'rdfs:label'));
-    """;
+  rdf:type v-wf:Mapping ;
+  v-wf:mapToVariable s-wf:var_actor_task_action ;
+  v-wf:mappingExpression """
+			veda.Util.newStr ('Отклонено. Примите решение')
+  """;
   rdfs:label "Название задачи при ответе Отклонено"@ru ;
 .
 s-wf:un_task_27 a v-wf:Task;
@@ -759,12 +759,12 @@ s-wf:un_task_29 a v-wf:Task;
     v-wf:startingMapping s-wf:map_controller_4_PLV_controller, s-wf:map_doc_id, s-wf:map_from_2_result_decision_author, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_un_task_29_task_action, s-wf:map_t2_sm3, s-wf:possible_decision_after_return, s-wf:map_decision_route_to_add_reaction, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_actor_task_description_from_LV_result_decision, s-wf:map_redirect_from_4_PLV_redirect_from;
     v-wf:startingMessageMap s-wf:map_comment_4_TIV_actor_task_comment, s-wf:map_msg_template_4_SV_default_template, s-wf:map_document_4_TIV_docId, s-wf:map_vf_to_4_O_executor, s-wf:map_comment_4_TIV_actor_task_action, s-wf:map_inbox_url_4_appInboxUrl_of_executor, s-wf:map_doc_url_4_appUrl_of_executor, s-wf:map_from_4_TIV_from, s-wf:map_rdf_type_4_v_s_Email, s-wf:map_task_url_4_O_DecisionForms_of_executor, s-wf:map_to_4_O_executor, s-wf:map_wf_from_4_TIV_initiator.
 s-wf:map_un_task_29_task_action
-    rdf:type v-wf:Mapping ;
-    v-wf:mapToVariable s-wf:var_actor_task_action ;
-    v-wf:mappingExpression """               
-        veda.Util.newStr(veda.Util.getPropertyChain('v-wf:DecisionProlongate_Bundle', 'rdfs:label'));
-    """;
-    rdfs:label "Название задачи при ответе Прошу продлить срок"@ru ;
+  rdf:type v-wf:Mapping ;
+  v-wf:mapToVariable s-wf:var_actor_task_action ;
+  v-wf:mappingExpression """
+			veda.Util.newStr ('Продлить срок')
+  """;
+  rdfs:label "Название задачи при ответе Прошу продлить срок"@ru ;
 .
 s-wf:un_task_30 a v-wf:Task;
     rdfs:comment "Обработка redirect: responsible = *result_decision[wf:to]"^^xsd:string;
@@ -872,12 +872,12 @@ s-wf:un_task_32 a v-wf:Task;
     v-wf:startingMapping s-wf:map_controller_4_PLV_controller, s-wf:map_doc_id, s-wf:map_from_2_result_decision_author, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_un_task_32_task_action, s-wf:map_t2_sm3, s-wf:possible_decision_for_remake, s-wf:map_decision_route_to_add_reaction, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_actor_task_description_from_LV_result_decision, s-wf:map_redirect_from_4_PLV_redirect_from;
     v-wf:startingMessageMap s-wf:map_comment_4_TIV_actor_task_comment, s-wf:map_msg_template_4_SV_default_template, s-wf:map_document_4_TIV_docId, s-wf:map_vf_to_4_O_executor, s-wf:map_comment_4_TIV_actor_task_action, s-wf:map_inbox_url_4_appInboxUrl_of_executor, s-wf:map_doc_url_4_appUrl_of_executor, s-wf:map_from_4_TIV_from, s-wf:map_rdf_type_4_v_s_Email, s-wf:map_task_url_4_O_DecisionForms_of_executor, s-wf:map_to_4_O_executor, s-wf:map_wf_from_4_TIV_initiator.
 s-wf:map_un_task_32_task_action
-    rdf:type v-wf:Mapping ;
-    v-wf:mapToVariable s-wf:var_actor_task_action ;
-    v-wf:mappingExpression """
-        veda.Util.newStr(veda.Util.getPropertyChain('v-wf:DecisionRemake_Bundle', 'rdfs:label'));
-    """;
-    rdfs:label "Название задачи при ответе доработать"@ru ;
+  rdf:type v-wf:Mapping ;
+  v-wf:mapToVariable s-wf:var_actor_task_action ;
+  v-wf:mappingExpression """
+			veda.Util.newStr ('Доработать')
+  """;
+  rdfs:label "Название задачи при ответе доработать"@ru ;
 .
 s-wf:un_flow_48 a v-wf:Flow;
     rdfs:isDefinedBy <http://semantic-machines.com/veda/simple-workflow/>;
