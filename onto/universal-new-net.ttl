@@ -989,10 +989,18 @@ d:w4d2u6grst2izvykoiq1ga2i4v a v-wf:Task;
 s-wf:un_flow_57 a v-wf:Flow;
     v-wf:flowsInto d:yyn5bcr6y456et5gyu7z51fpo6;
     v-wf:predicate "true"^^xsd:string.
+
+s-wf:def_exec_yyn5bcr6y456et5gyu7z51fpo6
+  rdf:type v-wf:ExecutorDefinition ;
+  v-wf:executorExpression """var setStatus = process.getInputVariable ('setStatus')
+  setStatus && setStatus.length>0 ? s-wf:codelet_set_value_to_document : []""" ;
+  rdfs:isDefinedBy s-wf: ;
+.
+
 d:yyn5bcr6y456et5gyu7z51fpo6 a v-wf:Task;
     rdfs:label "Замена срока "^^xsd:string;
     v-wf:belongsTo s-wf:UniversalNet;
-    v-wf:executor s-wf:codelet_set_value_to_document;
+    v-wf:executor s-wf:def_exec_yyn5bcr6y456et5gyu7z51fpo6;
     v-wf:hasFlow s-wf:un_flow_58;
     v-wf:join v-wf:None;
     v-wf:locationX "484"^^xsd:integer;
