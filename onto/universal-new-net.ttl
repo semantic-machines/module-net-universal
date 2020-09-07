@@ -1168,7 +1168,7 @@ s-wf:def_exec_responsible_for_group
 
 s-wf:un_flow_61 a v-wf:Flow;
     v-wf:flowsInto s-wf:un_task_35;
-    v-wf:predicate "task_result.is_all_executors_taken_decision ('result', veda.Util.newUri ('v-wf:DecisionRemakeDroupAccount')) == true"^^xsd:string.    
+    v-wf:predicate "task_result.is_all_executors_taken_decision ('result', veda.Util.newUri ('v-wf:DecisionRemakeGroupAccount')) == true"^^xsd:string.    
 
 s-wf:un_flow_62 a v-wf:Flow;
     v-wf:flowsInto s-wf:un_task_37;
