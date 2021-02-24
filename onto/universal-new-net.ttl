@@ -44,7 +44,7 @@ s-wf:UniversalNet a v-wf:Net;
     v-wf:consistsOf s-wf:un_task_34, s-wf:un_flow_53, s-wf:un_flow_54, s-wf:un_flow_55, s-wf:un_flow_56, s-wf:u8, d:w4d2u6grst2izvykoiq1ga2i4v;
     v-wf:consistsOf s-wf:un_flow_57, d:yyn5bcr6y456et5gyu7z51fpo6, s-wf:un_flow_58, s-wf:u9, s-wf:un_flow_59, s-wf:un_flow_60 ;
     v-wf:consistsOf s-wf:un_task_35, s-wf:un_task_36, s-wf:un_task_37, s-wf:un_flow_61, s-wf:un_flow_62, s-wf:un_flow_63, s-wf:un_flow_64, s-wf:un_flow_65, s-wf:un_flow_66 ;
-    v-wf:inputVariable s-wf:var_msg_template, s-wf:var_doc_id, s-wf:var_initiator, s-wf:var_coordinator, s-wf:var_coordinator_level, s-wf:var_rightset, s-wf:var_set_status;
+    v-wf:inputVariable s-wf:var_msg_template, s-wf:var_doc_id, s-wf:var_initiator, s-wf:var_coordinator, s-wf:var_coordinator_level, s-wf:var_rightset, s-wf:var_set_status, s-wf:var_set_autoCompleted;
     v-wf:localVariable s-wf:var_responsible, s-wf:var_result, s-wf:var_actor, s-wf:var_controller, s-wf:var_add_request_actor, s-wf:var_result_decision, s-wf:var_result_decision_nct2, s-wf:var_actor_task_date_to, s-wf:var_actor_task_comment, s-wf:var_actor_task_action, s-wf:var_redirect_from, s-wf:var_documentType.
 s-wf:un_ic a v-wf:InputCondition;
     rdfs:isDefinedBy <http://semantic-machines.com/veda/simple-workflow/>;
@@ -183,7 +183,7 @@ s-wf:un_t2 a v-wf:Task;
     v-wf:split v-wf:XOR;
     v-wf:startDecisionTransform s-wf:tr_actor_form_direct;
     v-wf:startingExecutorJournalMap s-wf:map_jrn_msg_nc_t2_b, s-wf:map_jrn_msg_nc_t2_b_ev, s-wf:map_journal_to_4_PLV_actor, s-wf:map_journal_doc_id, s-wf:map_journal_process_id, s-wf:map_jrn_msg_nc_t2_comment;
-    v-wf:startingMapping s-wf:map_doc_id, s-wf:map_from_4_PLV_initiator, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_t2_sm2, s-wf:map_t2_sm3, s-wf:map_possible_decision, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_redirect_from_4_PLV_redirect_from, s-wf:map_set_status;
+    v-wf:startingMapping s-wf:map_doc_id, s-wf:map_from_4_PLV_initiator, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_t2_sm2, s-wf:map_t2_sm3, s-wf:map_possible_decision, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_redirect_from_4_PLV_redirect_from, s-wf:map_set_status, s-wf:map_set_autoCompleted;
     v-wf:startingMessageMap s-wf:map_msg_template_4_SV_default_template, s-wf:map_from_4_TIV_from, s-wf:map_document_4_TIV_docId, s-wf:map_vf_to_4_O_executor, s-wf:map_comment_4_TIV_actor_task_action, s-wf:map_comment_4_TIV_actor_task_comment, s-wf:map_documentType_4_TIV_documentType, s-wf:map_inbox_url_4_appInboxUrl_of_executor, s-wf:map_doc_url_4_appUrl_of_executor, s-wf:map_wf_from_4_TIV_initiator, s-wf:map_rdf_type_4_v_s_Email, s-wf:map_task_url_4_O_DecisionForms_of_executor, s-wf:map_to_4_O_executor, s-wf:map_documentType_4_TIV_documentType.
 s-wf:un_f_t2_t1 a v-wf:Flow;
     rdfs:isDefinedBy <http://semantic-machines.com/veda/universal-net>;
