@@ -69,6 +69,7 @@ s-wf:tr_actor_form_direct
   v-wf:transformRule s-wf:rul_tr_form_11 ;
   v-wf:transformRule s-wf:rul_tr_form_12 ;
   v-wf:transformRule s-wf:rul_tr_form_13 ;
+  v-wf:transformRule s-wf:rul_tr_form_14 ;
   rdfs:isDefinedBy s-wf: ;
   rdfs:label "Трансформация создания пользовательской формы ответа на задачу с управляющими кнпоками"@ru ;
 .
@@ -247,6 +248,15 @@ s-wf:rul_tr_form_13
   v-wf:grouping "1";
   rdfs:isDefinedBy s-wf: ;
   rdfs:label "Установить v-wf:isAutoCompleted из переменной s-wf:var_set_autoCompleted"@ru ;
+.
+s-wf:rul_tr_form_14
+  rdf:type v-wf:Rule ;
+  v-wf:segregateObject "objectContentStrValue ('v-wf:variableName', 'isEditable')" ;
+  v-wf:segregateElement "contentName('v-wf:variableValue')" ;
+  v-wf:aggregate  "putValue ('v-wf:isEditable')";
+  v-wf:grouping "1";
+  rdfs:isDefinedBy s-wf: ;
+  rdfs:label "Установить v-wf:isEditable из переменной s-wf:var_isEditable"@ru ;
 .
 
 s-wf:net_coordination
