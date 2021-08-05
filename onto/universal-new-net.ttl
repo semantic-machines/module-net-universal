@@ -1202,7 +1202,7 @@ s-wf:def_exec_responsible_for_group
         print('responsible: ', veda.Util.toJson(responsible));
         if (responsible && responsible.length) {
             var individ = get_individual(ticket, veda.Util.getUri(responsible));
-            if (veda.Util.getFirstValue(individ['v-s:origin']) === 'Group User') {
+            if (veda.Util.getFirstValue(individ['v-s:origin']) === 'Group') {
                 var chief = undefined;
                 var department = get_individual(ticket, veda.Util.getUri(individ['v-s:occupation']));
                 print('department: ', veda.Util.toJson(department));
