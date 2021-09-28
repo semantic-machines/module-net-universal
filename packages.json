@@ -3,4 +3,8 @@
     "url" : "https://github.com/semantic-machines/module-net-universal"
     "description" : "Module - net-universal"
     "version": "1.0.12"
+
+    "dependencies": {
+	"module-net-basic": "1.1.12"
+    }
 }
