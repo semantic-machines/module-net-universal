@@ -45,8 +45,8 @@ s-wf:UniversalNet a v-wf:Net;
     v-wf:consistsOf s-wf:un_flow_57, d:yyn5bcr6y456et5gyu7z51fpo6, s-wf:un_flow_58, s-wf:u9, s-wf:un_flow_59, s-wf:un_flow_60 ;
     v-wf:consistsOf s-wf:un_task_35, s-wf:un_task_36, s-wf:un_task_37, s-wf:un_flow_61, s-wf:un_flow_62, s-wf:un_flow_63, s-wf:un_flow_64, s-wf:un_flow_65, s-wf:un_flow_66 ;
     v-wf:consistsOf s-wf:un_set_status_underControl, d:a3l8y69jxs5nqhqgqmjokvn9m6j, s-wf:un_set_status_rejected, d:j69h7v2gsfysenmfd60rba0rmw, s-wf:un_set_status_notPerformed, s-wf:un_set_status_rejected2, d:a8mndd498yxwkpgmbi057lvvvam ;
-    v-wf:inputVariable s-wf:var_msg_template, s-wf:var_doc_id, s-wf:var_initiator, s-wf:var_coordinator, s-wf:var_coordinator_level, s-wf:var_rightset, s-wf:var_set_status, s-wf:var_set_autoCompleted, s-wf:var_isEditable;
-    v-wf:localVariable s-wf:var_responsible, s-wf:var_result, s-wf:var_actor, s-wf:var_controller, s-wf:var_add_request_actor, s-wf:var_result_decision, s-wf:var_result_decision_nct2, s-wf:var_actor_task_date_to, s-wf:var_actor_task_comment, s-wf:var_actor_task_action, s-wf:var_redirect_from, s-wf:var_documentType.
+    v-wf:inputVariable s-wf:var_msg_template, s-wf:var_doc_id, s-wf:var_initiator, s-wf:var_coordinator, s-wf:var_coordinator_level, s-wf:var_rightset, s-wf:var_set_status, s-wf:var_set_autoCompleted, s-wf:var_isEditable, s-wf:var_isAutoinstruction;
+    v-wf:localVariable s-wf:var_responsible, s-wf:var_result, s-wf:var_actor, s-wf:var_controller, s-wf:var_add_request_actor, s-wf:var_result_decision, s-wf:var_result_decision_nct2, s-wf:var_actor_task_date_to, s-wf:var_actor_task_comment, s-wf:var_actor_task_action, s-wf:var_redirect_from, s-wf:var_documentType, s-wf:var_redirect_from_actor.
 s-wf:un_ic a v-wf:InputCondition;
     rdfs:isDefinedBy <http://semantic-machines.com/veda/simple-workflow/>;
     rdfs:label "C1s"^^xsd:string;
@@ -184,7 +184,7 @@ s-wf:un_t2 a v-wf:Task;
     v-wf:split v-wf:XOR;
     v-wf:startDecisionTransform s-wf:tr_actor_form_direct;
     v-wf:startingExecutorJournalMap s-wf:map_jrn_msg_nc_t2_b, s-wf:map_jrn_msg_nc_t2_b_ev, s-wf:map_journal_to_4_PLV_actor, s-wf:map_journal_doc_id, s-wf:map_journal_process_id, s-wf:map_jrn_msg_nc_t2_comment;
-    v-wf:startingMapping s-wf:map_doc_id, s-wf:map_from_4_PLV_initiator, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_t2_sm2, s-wf:map_t2_sm3, s-wf:map_possible_decision, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_redirect_from_4_PLV_redirect_from, s-wf:map_set_status, s-wf:map_set_autoCompleted, s-wf:map_isEditable;
+    v-wf:startingMapping s-wf:map_doc_id, s-wf:map_from_4_PLV_initiator, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_t2_sm2, s-wf:map_t2_sm3, s-wf:map_possible_decision, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_redirect_from_4_PLV_redirect_from, s-wf:map_set_status, s-wf:map_set_autoCompleted, s-wf:map_isEditable, s-wf:map_isAutoinstruction;
     v-wf:startingMessageMap s-wf:map_msg_template_4_SV_default_template, s-wf:map_from_4_TIV_from, s-wf:map_document_4_TIV_docId, s-wf:map_vf_to_4_O_executor, s-wf:map_comment_4_TIV_actor_task_action, s-wf:map_comment_4_TIV_actor_task_comment, s-wf:map_documentType_4_TIV_documentType, s-wf:map_inbox_url_4_appInboxUrl_of_executor, s-wf:map_doc_url_4_appUrl_of_executor, s-wf:map_wf_from_4_TIV_initiator, s-wf:map_rdf_type_4_v_s_Email, s-wf:map_task_url_4_O_DecisionForms_of_executor, s-wf:map_to_4_O_executor, s-wf:map_documentType_4_TIV_documentType
 .
 
@@ -338,7 +338,7 @@ s-wf:un_oc a v-wf:Task;
     v-wf:split v-wf:None;
     v-wf:startDecisionTransform s-wf:tr_actor_form;
     v-wf:startingExecutorJournalMap s-wf:map_jrn_msg_nc_t2_b, s-wf:map_jrn_msg_nc_t2_b_ev, s-wf:map_journal_to_4_PLV_controller, s-wf:map_journal_doc_id, s-wf:map_journal_process_id;
-    v-wf:startingMapping s-wf:map_doc_id, s-wf:map_from_2_result_decision_author, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_actor_task_action_4LV_result_decision_to_controller, s-wf:map_t2_sm_control, s-wf:possible_decision_for_controller, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_actor_task_description_from_LV_result_decision, s-wf:map_redirect_from_4_PLV_redirect_from;
+    v-wf:startingMapping s-wf:map_doc_id, s-wf:map_from_2_result_decision_author, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_actor_task_action_4LV_result_decision_to_controller, s-wf:map_t2_sm_control, s-wf:possible_decision_for_controller, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_actor_task_description_from_LV_result_decision, s-wf:map_redirect_from_4_PLV_redirect_from, s-wf:map_isAutoinstruction;
     v-wf:startingMessageMap s-wf:map_comment_4_TIV_actor_task_description, s-wf:map_msg_template_4_SV_default_template, s-wf:map_document_4_TIV_docId, s-wf:map_vf_to_4_O_executor, s-wf:map_comment_4_TIV_actor_task_action, s-wf:map_inbox_url_4_appInboxUrl_of_executor, s-wf:map_doc_url_4_appUrl_of_executor, s-wf:map_from_4_TIV_from, s-wf:map_rdf_type_4_v_s_Email, s-wf:map_task_url_4_O_DecisionForms_of_executor, s-wf:map_to_4_O_executor, s-wf:map_wf_from_4_TIV_initiator.
 s-wf:un_r_to_i_return a v-wf:Flow;
     rdfs:isDefinedBy <http://semantic-machines.com/veda/simple-workflow/>;
@@ -401,7 +401,8 @@ s-wf:un_to_finish a v-wf:Flow;
     v-s:created "2019-04-09T13:25:14.000Z"^^xsd:dateTime;
     v-s:creator cfg:AdministratorAppointment;
     v-s:updateCounter "2"^^xsd:integer;
-    v-wf:completedMapping s-wf:map_actor_2_result_decision, s-wf:map_redirect_from_2_result_decision;
+    v-wf:startingMapping s-wf:map_redirect_from__actor_2_result_decision ;
+    v-wf:completedMapping s-wf:map_actor_2_result_decision, s-wf:map_redirect_from_2_result_decision ;
     v-wf:hasFlow <d:a2dcf4fb5-ca60-4b2d-d303-91f8c29db59e_another____1>;
     v-wf:join v-wf:None;
     v-wf:locationX "780"^^xsd:integer;
@@ -456,7 +457,7 @@ s-wf:un_task_20 a v-wf:Task;
     v-wf:split v-wf:None;
     v-wf:startDecisionTransform s-wf:tr_actor_form;
     v-wf:startingExecutorJournalMap s-wf:map_jrn_msg_nc_t2_b____1, s-wf:map_jrn_msg_nc_t2_b_ev, s-wf:map_journal_to_4_PLV_responsible, s-wf:map_journal_doc_id, s-wf:map_journal_process_id;
-    v-wf:startingMapping s-wf:map_controller_4_PLV_controller, s-wf:map_doc_id, s-wf:map_from_2_result_decision_author, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_un_task_20_task_action, s-wf:map_t2_sm3, s-wf:possible_decision_after_return, s-wf:map_decision_route_to_add_reaction, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_actor_task_description_from_LV_result_decision, s-wf:map_redirect_from_4_PLV_redirect_from;
+    v-wf:startingMapping s-wf:map_controller_4_PLV_controller, s-wf:map_doc_id, s-wf:map_from_2_result_decision_author, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_un_task_20_task_action, s-wf:map_t2_sm3, s-wf:possible_decision_after_return, s-wf:map_decision_route_to_add_reaction, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_actor_task_description_from_LV_result_decision, s-wf:map_redirect_from_4_PLV_redirect_from, s-wf:map_isAutoinstruction ;
     v-wf:startingMessageMap s-wf:map_comment_4_TIV_actor_task_description, s-wf:map_msg_template_4_SV_default_template, s-wf:map_document_4_TIV_docId, s-wf:map_vf_to_4_O_executor, s-wf:map_comment_4_TIV_actor_task_action, s-wf:map_inbox_url_4_appInboxUrl_of_executor, s-wf:map_doc_url_4_appUrl_of_executor, s-wf:map_from_4_TIV_from, s-wf:map_rdf_type_4_v_s_Email, s-wf:map_task_url_4_O_DecisionForms_of_executor, s-wf:map_to_4_O_executor, s-wf:map_wf_from_4_TIV_initiator.
 s-wf:un_flow_20 a v-wf:Flow;
     rdfs:isDefinedBy <http://semantic-machines.com/veda/simple-workflow/>;
@@ -550,7 +551,7 @@ s-wf:un_task_23 a v-wf:Task;
     v-wf:completeDecisionTransform s-wf:tr_taken_decision;
     v-wf:completedExecutorJournalMap s-wf:map_jrn_msg_nce_t2_b, s-wf:map_jrn_msg_nce_t2_b_ev, s-wf:map_journal_to_4_OOV_result_data_N_author, s-wf:map_journal_doc_id, s-wf:map_journal_process_id, s-wf:map_jrn_decision_b;
     v-wf:completedMapping s-wf:map_set_decision_from_local, s-wf:map_set_result_decision_from_TR_result_data, s-wf:map_actor_task_action_return_result_decision, s-wf:map_set_actor_task_description_from_TR_result_data, s-wf:map_t2_sm5, s-wf:map_redirect_from_2_undefine, s-wf:map_result_decision_dateTo_2_actor_task_date_to, s-wf:map_cleaning_responsible;
-    v-wf:executor s-wf:def_exec_responsible;
+    v-wf:executor s-wf:exec_responsible_for_redirected;
     v-wf:expectedResultType s-wf:UserTaskForm;
     v-wf:hasFlow s-wf:un_flow_27, s-wf:un_flow_28, s-wf:un_flow_29;
     v-wf:join v-wf:None;
@@ -559,7 +560,7 @@ s-wf:un_task_23 a v-wf:Task;
     v-wf:split v-wf:None;
     v-wf:startDecisionTransform s-wf:tr_actor_form;
     v-wf:startingExecutorJournalMap s-wf:map_jrn_msg_nc_t2_b____1, s-wf:map_jrn_msg_nc_t2_b_ev, s-wf:map_journal_to_4_PLV_responsible, s-wf:map_journal_doc_id, s-wf:map_journal_process_id;
-    v-wf:startingMapping s-wf:map_controller_4_PLV_controller, s-wf:map_doc_id, s-wf:map_from_2_result_decision_author, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_un_task_23_task_action, s-wf:map_t2_sm3, s-wf:possible_decision_after_return, s-wf:map_decision_route_to_add_reaction, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_actor_task_description_from_LV_result_decision, s-wf:map_redirect_from_4_PLV_redirect_from;
+    v-wf:startingMapping s-wf:map_controller_4_PLV_controller, s-wf:map_doc_id, s-wf:map_from_2_result_decision_author, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_un_task_23_task_action, s-wf:map_t2_sm3, s-wf:possible_decision_for_wrong_executor_task, s-wf:map_decision_route_to_add_reaction, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_actor_task_description_from_LV_result_decision, s-wf:map_redirect_from_4_PLV_redirect_from, s-wf:map_isAutoinstruction;
     v-wf:startingMessageMap s-wf:map_comment_4_TIV_actor_task_description, s-wf:map_msg_template_4_SV_default_template, s-wf:map_document_4_TIV_docId, s-wf:map_vf_to_4_O_executor, s-wf:map_comment_4_TIV_actor_task_action, s-wf:map_inbox_url_4_appInboxUrl_of_executor, s-wf:map_doc_url_4_appUrl_of_executor, s-wf:map_from_4_TIV_from, s-wf:map_rdf_type_4_v_s_Email, s-wf:map_task_url_4_O_DecisionForms_of_executor, s-wf:map_to_4_O_executor, s-wf:map_wf_from_4_TIV_initiator.
 s-wf:map_un_task_23_task_action
   rdf:type v-wf:Mapping ;
@@ -719,7 +720,7 @@ s-wf:un_task_26 a v-wf:Task;
     v-wf:split v-wf:None;
     v-wf:startDecisionTransform s-wf:tr_actor_form;
     v-wf:startingExecutorJournalMap s-wf:map_jrn_msg_nc_t2_b____1, s-wf:map_jrn_msg_nc_t2_b_ev, s-wf:map_journal_to_4_PLV_responsible, s-wf:map_journal_doc_id, s-wf:map_journal_process_id;
-    v-wf:startingMapping s-wf:map_controller_4_PLV_controller, s-wf:map_doc_id, s-wf:map_from_2_result_decision_author, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_un_task_26_task_action, s-wf:map_t2_sm3, s-wf:possible_decision_after_return, s-wf:map_decision_route_to_add_reaction, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_actor_task_description_from_LV_result_decision, s-wf:map_redirect_from_4_PLV_redirect_from;
+    v-wf:startingMapping s-wf:map_controller_4_PLV_controller, s-wf:map_doc_id, s-wf:map_from_2_result_decision_author, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_un_task_26_task_action, s-wf:map_t2_sm3, s-wf:possible_decision_after_return, s-wf:map_decision_route_to_add_reaction, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_actor_task_description_from_LV_result_decision, s-wf:map_redirect_from_4_PLV_redirect_from, s-wf:map_isAutoinstruction;
     v-wf:startingMessageMap s-wf:map_comment_4_TIV_actor_task_description, s-wf:map_msg_template_4_SV_default_template, s-wf:map_document_4_TIV_docId, s-wf:map_vf_to_4_O_executor, s-wf:map_comment_4_TIV_actor_task_action, s-wf:map_inbox_url_4_appInboxUrl_of_executor, s-wf:map_doc_url_4_appUrl_of_executor, s-wf:map_from_4_TIV_from, s-wf:map_rdf_type_4_v_s_Email, s-wf:map_task_url_4_O_DecisionForms_of_executor, s-wf:map_to_4_O_executor, s-wf:map_wf_from_4_TIV_initiator.
 s-wf:map_un_task_26_task_action
   rdf:type v-wf:Mapping ;
@@ -816,7 +817,7 @@ s-wf:un_task_29 a v-wf:Task;
     v-wf:split v-wf:None;
     v-wf:startDecisionTransform s-wf:tr_actor_form;
     v-wf:startingExecutorJournalMap s-wf:map_jrn_msg_nc_t2_b____1, s-wf:map_jrn_msg_nc_t2_b_ev, s-wf:map_journal_to_4_PLV_responsible, s-wf:map_journal_doc_id, s-wf:map_journal_process_id;
-    v-wf:startingMapping s-wf:map_controller_4_PLV_controller, s-wf:map_doc_id, s-wf:map_from_2_result_decision_author, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_un_task_29_task_action, s-wf:map_t2_sm3, s-wf:possible_decision_after_return, s-wf:map_decision_route_to_add_reaction, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_actor_task_description_from_LV_result_decision, s-wf:map_redirect_from_4_PLV_redirect_from;
+    v-wf:startingMapping s-wf:map_controller_4_PLV_controller, s-wf:map_doc_id, s-wf:map_from_2_result_decision_author, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_un_task_29_task_action, s-wf:map_t2_sm3, s-wf:possible_decision_after_return, s-wf:map_decision_route_to_add_reaction, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_actor_task_description_from_LV_result_decision, s-wf:map_redirect_from_4_PLV_redirect_from, s-wf:map_isAutoinstruction;
     v-wf:startingMessageMap s-wf:map_comment_4_TIV_actor_task_description, s-wf:map_msg_template_4_SV_default_template, s-wf:map_document_4_TIV_docId, s-wf:map_vf_to_4_O_executor, s-wf:map_comment_4_TIV_actor_task_action, s-wf:map_inbox_url_4_appInboxUrl_of_executor, s-wf:map_doc_url_4_appUrl_of_executor, s-wf:map_from_4_TIV_from, s-wf:map_rdf_type_4_v_s_Email, s-wf:map_task_url_4_O_DecisionForms_of_executor, s-wf:map_to_4_O_executor, s-wf:map_wf_from_4_TIV_initiator.
 s-wf:map_un_task_29_task_action
   rdf:type v-wf:Mapping ;
@@ -929,7 +930,7 @@ s-wf:un_task_32 a v-wf:Task;
     v-wf:split v-wf:None;
     v-wf:startDecisionTransform s-wf:tr_actor_form;
     v-wf:startingExecutorJournalMap s-wf:map_jrn_msg_nc_t2_b____1, s-wf:map_jrn_msg_nc_t2_b_ev, s-wf:map_journal_to_4_PLV_responsible, s-wf:map_journal_doc_id, s-wf:map_journal_process_id;
-    v-wf:startingMapping s-wf:map_controller_4_PLV_controller, s-wf:map_doc_id, s-wf:map_from_2_result_decision_author, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_un_task_32_task_action, s-wf:map_t2_sm3, s-wf:possible_decision_for_remake, s-wf:map_decision_route_to_add_reaction, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_actor_task_description_from_LV_result_decision, s-wf:map_redirect_from_4_PLV_redirect_from;
+    v-wf:startingMapping s-wf:map_controller_4_PLV_controller, s-wf:map_doc_id, s-wf:map_from_2_result_decision_author, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_un_task_32_task_action, s-wf:map_t2_sm3, s-wf:possible_decision_for_remake, s-wf:map_decision_route_to_add_reaction, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_actor_task_description_from_LV_result_decision, s-wf:map_redirect_from_4_PLV_redirect_from, s-wf:map_isAutoinstruction;
     v-wf:startingMessageMap s-wf:map_comment_4_TIV_actor_task_description, s-wf:map_msg_template_4_SV_default_template, s-wf:map_document_4_TIV_docId, s-wf:map_vf_to_4_O_executor, s-wf:map_comment_4_TIV_actor_task_action, s-wf:map_inbox_url_4_appInboxUrl_of_executor, s-wf:map_doc_url_4_appUrl_of_executor, s-wf:map_from_4_TIV_from, s-wf:map_rdf_type_4_v_s_Email, s-wf:map_task_url_4_O_DecisionForms_of_executor, s-wf:map_to_4_O_executor, s-wf:map_wf_from_4_TIV_initiator.
 s-wf:map_un_task_32_task_action
   rdf:type v-wf:Mapping ;
@@ -1191,7 +1192,7 @@ s-wf:un_task_37 a v-wf:Task;
     v-wf:split v-wf:None;
     v-wf:startDecisionTransform s-wf:tr_actor_form;
     v-wf:startingExecutorJournalMap s-wf:map_jrn_msg_nc_t2_b____1, s-wf:map_jrn_msg_nc_t2_b_ev, s-wf:map_journal_to_4_PLV_responsible, s-wf:map_journal_doc_id, s-wf:map_journal_process_id;
-    v-wf:startingMapping s-wf:map_controller_4_PLV_controller, s-wf:map_doc_id, s-wf:map_from_2_result_decision_author, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_un_task_32_task_action, s-wf:map_t2_sm3, s-wf:possible_decision_for_remake, s-wf:map_decision_route_to_add_reaction, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_actor_task_description_from_LV_result_decision, s-wf:map_redirect_from_4_PLV_redirect_from;
+    v-wf:startingMapping s-wf:map_controller_4_PLV_controller, s-wf:map_doc_id, s-wf:map_from_2_result_decision_author, s-wf:map_coord_level, s-wf:map_t2_sm1, s-wf:map_un_task_32_task_action, s-wf:map_t2_sm3, s-wf:possible_decision_for_remake, s-wf:map_decision_route_to_add_reaction, s-wf:map_decision_form_type_4_PIV_decision_form_type, s-wf:map_actor_task_description_from_LV_result_decision, s-wf:map_redirect_from_4_PLV_redirect_from, s-wf:map_isAutoinstruction;
     v-wf:startingMessageMap s-wf:map_comment_4_TIV_actor_task_description, s-wf:map_msg_template_4_SV_default_template, s-wf:map_document_4_TIV_docId, s-wf:map_vf_to_4_O_executor, s-wf:map_comment_4_TIV_actor_task_action, s-wf:map_inbox_url_4_appInboxUrl_of_executor, s-wf:map_doc_url_4_appUrl_of_executor, s-wf:map_from_4_TIV_from, s-wf:map_rdf_type_4_v_s_Email, s-wf:map_task_url_4_O_DecisionForms_of_executor, s-wf:map_to_4_O_executor, s-wf:map_wf_from_4_TIV_initiator.    
 
 s-wf:def_exec_responsible_for_group

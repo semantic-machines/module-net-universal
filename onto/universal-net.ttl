@@ -48,6 +48,7 @@ s-wf:tr_actor_form
   v-wf:transformRule s-wf:rul_tr_form_8 ;
   v-wf:transformRule s-wf:rul_tr_form_9a ;
   v-wf:transformRule s-wf:rul_tr_form_10 ;
+  v-wf:transformRule s-wf:rul_tr_form_15 ;
   rdfs:isDefinedBy s-wf: ;
   rdfs:label "Трансформация создания пользовательской формы ответа на задачу без управляющих кнопок"@ru ;
 .
@@ -70,6 +71,7 @@ s-wf:tr_actor_form_direct
   v-wf:transformRule s-wf:rul_tr_form_12 ;
   v-wf:transformRule s-wf:rul_tr_form_13 ;
   v-wf:transformRule s-wf:rul_tr_form_14 ;
+  v-wf:transformRule s-wf:rul_tr_form_15 ;
   rdfs:isDefinedBy s-wf: ;
   rdfs:label "Трансформация создания пользовательской формы ответа на задачу с управляющими кнпоками"@ru ;
 .
@@ -257,6 +259,15 @@ s-wf:rul_tr_form_14
   v-wf:grouping "1";
   rdfs:isDefinedBy s-wf: ;
   rdfs:label "Установить v-wf:isEditable из переменной s-wf:var_isEditable"@ru ;
+.
+s-wf:rul_tr_form_15
+  rdf:type v-wf:Rule ;
+  v-wf:segregateObject "objectContentStrValue ('v-wf:variableName', 'isAutoinstruction')" ;
+  v-wf:segregateElement "contentName('v-wf:variableValue')" ;
+  v-wf:aggregate  "putValue ('v-wf:isAutoinstruction')";
+  v-wf:grouping "1";
+  rdfs:isDefinedBy s-wf: ;
+  rdfs:label "Установить v-wf:isAutoinstruction из переменной s-wf:var_isAutoinstruction"@ru ;
 .
 
 s-wf:net_coordination
