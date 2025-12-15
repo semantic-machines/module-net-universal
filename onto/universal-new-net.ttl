@@ -798,7 +798,7 @@ s-wf:un_flow_36 a v-wf:Flow;
     v-s:updateCounter "2"^^xsd:integer;
     v-wf:belongsTo s-wf:UniversalNet;
     v-wf:flowsInto s-wf:un_task_28;
-    v-wf:predicate "task_result.is_all_executors_taken_decision ('result', veda.Util.newUri ('v-wf:DecisionRejected')) == true"^^xsd:string.
+    v-wf:predicate "task_result.is_all_executors_taken_decision_subClassOf ('result', veda.Util.newUri ('v-wf:DecisionRejected')) == true"^^xsd:string.
 s-wf:un_flow_37 a v-wf:Flow;
     rdfs:isDefinedBy <http://semantic-machines.com/veda/simple-workflow/>;
     v-s:created "2019-04-09T13:25:15.000Z"^^xsd:dateTime;
